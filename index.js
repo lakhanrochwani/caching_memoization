@@ -14,12 +14,11 @@ function mem_fn(fn) {
   let cache = [];
   return function (n) {
     let idx = n.toString();
-    // console.log('index',idx)
     if (cache[idx] === undefined) {
       console.log('index', idx, cache);
       cache[idx] = fn(n);
     }
-    console.log('Cached', cache[idx],cache);
+    console.log('Cached', cache[idx], cache);
     return cache[idx];
   };
 }
